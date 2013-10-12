@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * A unit test for the {@link HardCodedHelloWorldImpl} class.
  */
-public class UT_HelloWorldImpl {
+public class UT_HardCodedHelloWorldImpl {
 	@Test
 	public void testHelloWorld() {
 		HardCodedHelloWorldImpl helloWorldImpl = new HardCodedHelloWorldImpl();
