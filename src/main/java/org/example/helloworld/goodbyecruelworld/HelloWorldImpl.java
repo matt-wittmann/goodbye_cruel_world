@@ -35,14 +35,4 @@ public class HelloWorldImpl implements HelloWorld {
 	public void run() {
 		System.out.println(helloWorld().getHello());
 	}
-
-	/**
-	 * Point of entry into this Java program.
-	 *
-	 * @param args Command-line arguments to this Java program
-	 */
-	public static void main(String[] args) {
-		HelloWorldImpl helloWorld = new HelloWorldImpl();
-		helloWorld.run();
-	}
 }
