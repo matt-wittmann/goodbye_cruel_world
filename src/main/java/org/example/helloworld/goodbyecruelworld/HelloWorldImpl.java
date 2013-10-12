@@ -18,21 +18,22 @@ public class HelloWorldImpl implements HelloWorld {
 	/**
 	 * Greets the world.
 	 *
+	 * @return An instance of HelloBean
 	 * @see org.example.helloworld.goodbyecruelworld.HelloWorld#helloWorld()
 	 */
 	@Override
-	public void helloWorld() {
-		System.out.println(helloBean.getHello());
+	public HelloBean helloWorld() {
+		return helloBean;
 	}
 
 	/**
-	 * Delegates to {@link #helloWorld()}.
+	 * Prints the hello message from HelloBean to STDOUT.
 	 *
 	 * @see java.lang.Runnable#run()
 	 */
 	@Override
 	public void run() {
-		helloWorld();
+		System.out.println(helloWorld().getHello());
 	}
 
 	/**
