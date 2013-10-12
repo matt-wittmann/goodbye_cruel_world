@@ -23,7 +23,7 @@ public class HelloWorldImpl implements HelloWorld {
 	 */
 	@Override
 	public HelloBean helloWorld() {
-		return helloBean;
+		return helloBean.clone();
 	}
 
 	/**

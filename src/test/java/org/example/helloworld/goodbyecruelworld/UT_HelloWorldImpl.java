@@ -19,4 +19,16 @@ public class UT_HelloWorldImpl {
 		assertEquals("helloBean#getHello() must be equal to \"Hello, world!\"",
 				HelloConstants.HELLO_WORLD, helloBean.getHello());
 	}
+
+	@Test
+	public void testCorruptMessage() {
+		HelloWorldImpl helloWorldImpl = new HelloWorldImpl();
+		HelloBean helloBean = helloWorldImpl.helloWorld();
+		assertEquals("helloBean#getHello() must be equal to \"Hello, world!\"",
+				HelloConstants.HELLO_WORLD, helloBean.getHello());
+		helloBean.setHello("Salut à tout le monde !");
+		helloBean = helloWorldImpl.helloWorld();
+		assertEquals("On ne parle pas le français.",
+				HelloConstants.HELLO_WORLD, helloBean.getHello());
+	}
 }

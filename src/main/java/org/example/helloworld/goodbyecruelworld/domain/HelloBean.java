@@ -5,7 +5,7 @@ import org.example.helloworld.goodbyecruelworld.constants.HelloConstants;
 /**
  * JavaBean encapsulating core &quot;Hello, World&quot; message payload.
  */
-public class HelloBean {
+public class HelloBean implements Cloneable {
 	/** We wish to say only, &quot;Hello, world!&quot; with the HelloBean. */
 	private static final String ERR_NOT_HELLO = "HelloBean constructor argument must be: " + HelloConstants.HELLO_WORLD;
 	private String hello;
@@ -58,5 +58,16 @@ public class HelloBean {
 	 */
 	public static String getDefaultHello() {
 		return HelloConstants.HELLO_WORLD;
+	}
+
+	/**
+	 * Clones this HelloBean.
+	 *
+	 * @return A new copy of this HelloBean
+	 * @see java.lang.Object#clone()
+	 */
+	@Override
+	public HelloBean clone() {
+		return new HelloBean(hello);
 	}
 }
