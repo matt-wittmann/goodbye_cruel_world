@@ -1,7 +1,7 @@
 package org.example.helloworld.goodbyecruelworld.factory;
 
 import org.example.helloworld.goodbyecruelworld.HelloWorld;
-import org.example.helloworld.goodbyecruelworld.HelloWorldImpl;
+import org.example.helloworld.goodbyecruelworld.PropertiesDrivenHelloWorldImpl;
 
 /**
  * Enables different implementations of {@link HelloWorld} to be instantiated.
@@ -29,6 +29,6 @@ public class HelloWorldFactory {
 	 * @return A fresh HelloWorld
 	 */
 	public HelloWorld getHelloWorld() {
-		return new HelloWorldImpl();
+		return new PropertiesDrivenHelloWorldImpl();
 	}
 }

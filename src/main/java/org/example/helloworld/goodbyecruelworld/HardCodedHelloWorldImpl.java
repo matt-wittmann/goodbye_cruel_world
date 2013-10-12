@@ -3,15 +3,15 @@ package org.example.helloworld.goodbyecruelworld;
 import org.example.helloworld.goodbyecruelworld.domain.HelloBean;
 
 /**
- * HelloWorldImpl is the main class of the &quot;Goodbye, Cruel World&quot; program.
+ * HardCodedHelloWorldImpl is the main class of the &quot;Goodbye, Cruel World&quot; program.
  */
-public class HelloWorldImpl implements HelloWorld {
+public class HardCodedHelloWorldImpl implements HelloWorld {
 	private HelloBean helloBean;
 
 	/**
 	 * Default constructor.
 	 */
-	public HelloWorldImpl() {
+	public HardCodedHelloWorldImpl() {
 		this.helloBean = new HelloBean();
 	}
 
