@@ -1,11 +1,19 @@
 package org.example.helloworld.goodbyecruelworld;
 
+import org.example.helloworld.goodbyecruelworld.domain.HelloBean;
+
 /**
  * HelloWorldImpl is the main class of the &quot;Goodbye, Cruel World&quot; program.
  */
 public class HelloWorldImpl implements HelloWorld {
-	/** Hello, world! */
-	private static final String HELLO_WORLD = "Hello, world!";
+	private HelloBean helloBean;
+
+	/**
+	 * Default constructor.
+	 */
+	public HelloWorldImpl() {
+		this.helloBean = new HelloBean();
+	}
 
 	/**
 	 * Greets the world.
@@ -14,7 +22,7 @@ public class HelloWorldImpl implements HelloWorld {
 	 */
 	@Override
 	public void helloWorld() {
-		System.out.println(HELLO_WORLD);
+		System.out.println(helloBean.getHello());
 	}
 
 	/**
